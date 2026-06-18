@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Explorer</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="hero" id="hero">
+    <nav class="nav">
+      <div class="logo">
+        <span>Art Explorer</span>
+        <small>Art Institute of Chicago</small>
+      </div>
+
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#gallery">Collections</a>
+        <a href="#about">About</a>
+      </div>
+
+      <a class="api-btn" href="https://api.artic.edu/docs/" target="_blank">About the API</a>
+    </nav>
+
+    <div class="floating-art art-1"></div>
+    <div class="floating-art art-2"></div>
+    <div class="floating-art art-3"></div>
+    <div class="floating-art art-4"></div>
+
+    <section class="hero-content">
+      <h1>Discover.<br><span>Search. Explore.</span></h1>
+      <p>Search public artworks from the Art Institute of Chicago collection.</p>
+
+      <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Search: flowers, cat, portrait, landscape..." />
+        <button id="searchButton">Explore Art</button>
+      </div>
+
+      <div class="tags">
+        <button class="tag-btn" data-search="flowers">Flowers</button>
+        <button class="tag-btn" data-search="portrait">Portrait</button>
+        <button class="tag-btn" data-search="landscape">Landscape</button>
+        <button class="tag-btn" data-search="blue">Blue</button>
+        <button class="tag-btn" data-search="nature">Nature</button>
+        <button class="tag-btn" data-search="ocean">Ocean</button>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="gallery-header">
+      <div>
+        <p class="eyebrow">API RESULTS</p>
+        <h2>Explore Artworks ✦</h2>
+        <p id="statusText">Type something above to start exploring.</p>
+      </div>
+
+      <div id="resultCount" class="result-count">0 results</div>
+    </section>
+
+    <section id="gallery" class="gallery"></section>
+
+    <section id="about" class="about">
+      <div class="about-img"></div>
+      <div>
+        <h2>About the Collection</h2>
+        <p>
+          This project uses one REST API call to search artwork data. JavaScript then creates, updates, and displays the artwork cards dynamically through DOM manipulation.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Interactive REST API Project | Art Institute of Chicago API | INM420</p>
+  </footer>
+</body>
+</html>
